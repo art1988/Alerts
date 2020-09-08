@@ -160,19 +160,15 @@ public class Alerts {
 			{
 				goThroughServerList();
 			} 
-			catch (IOException e) 
-			{
-				e.printStackTrace();
-			} 
-			catch (BadLocationException e) 
+			catch (IOException|BadLocationException e)
 			{
 				e.printStackTrace();
 			}
 			
-			EventQueue.invokeLater(new Runnable() 
+			EventQueue.invokeLater(new Runnable()
 			{
 				@Override
-				public void run() 
+				public void run()
 				{
 					perform.setEnabled(true);
 					window.setTitle("Alerts");
